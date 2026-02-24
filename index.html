@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Student Management System</h1>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="text" id="roll" placeholder="Roll Number">
+    <input type="text" id="course" placeholder="Course">
+
+    <button class="add-btn" onclick="addStudent()">Add Student</button>
+    <button class="dark-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <br><br>
+    <input type="text" id="search" placeholder="Search Student..." onkeyup="searchStudent()">
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal" id="editModal">
+    <div class="modal-content">
+        <h3>Edit Student</h3>
+
+        <input type="text" id="editName">
+        <input type="text" id="editRoll">
+        <input type="text" id="editCourse">
+
+        <div class="modal-buttons">
+            <button class="update-btn" onclick="updateStudent()">Update</button>
+            <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
